@@ -9,7 +9,7 @@ import { Container, CardContainer } from './style';
 const Header = () => {
   const { overview, loading } = useLoan();
 
-  const { amountTaken, amountPayd, toBePayd } = overview;
+  const { amountTaken, amountPaid, toBePaid } = overview;
 
   return (
     <Container>
@@ -24,13 +24,13 @@ const Header = () => {
         />
         <ValueCard
           title="Pago"
-          value={formatBRLMoney(amountPayd)}
+          value={formatBRLMoney(amountPaid)}
           icon={<GiPayMoney />}
           loading={loading}
         />
         <ValueCard
           title="A Pagar"
-          value={formatBRLMoney(toBePayd)}
+          value={formatBRLMoney(toBePaid)}
           icon={<GiMoneyStack />}
           loading={loading}
         />

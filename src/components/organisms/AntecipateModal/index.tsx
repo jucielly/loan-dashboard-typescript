@@ -7,7 +7,7 @@ import { Installment } from '../../../types/installment';
 interface AntecipateModalProps {
   open: boolean;
   onClose: () => void;
-  installment: Installment;
+  installment?: Installment;
   payInstallment: () => void;
 }
 

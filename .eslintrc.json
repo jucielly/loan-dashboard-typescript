@@ -26,11 +26,11 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "linebreak-style": "off",
+    "@typescript-eslint/no-shadow": "off",
     "prettier/prettier": [
       "warn",
       {

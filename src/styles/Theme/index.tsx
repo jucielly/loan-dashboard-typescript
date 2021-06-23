@@ -24,6 +24,7 @@ const theme = {
   },
 };
 
+/* eslint-disable react/prop-types */
 const Theme: React.FC<ThemeProps> = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

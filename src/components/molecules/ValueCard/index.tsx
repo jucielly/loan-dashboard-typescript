@@ -5,7 +5,7 @@ import { StyledValueCard } from './style';
 interface ValueCardProps {
   title: string;
   icon: ReactNode;
-  value: number;
+  value: string;
   loading: boolean;
 }
 

@@ -3,6 +3,7 @@ import Button from '../../atoms/Button';
 import BaseModal from '../../molecules/BaseModal';
 import { Container } from './style';
 import { Installment } from '../../../types/installment';
+import formatBrlMoney from '../../../utils/formatMoney';
 
 interface AntecipateModalProps {
   open: boolean;
@@ -19,7 +20,9 @@ const AntecipateModal: React.FC<AntecipateModalProps> = ({
 }) => {
   return (
     <BaseModal
-      title={`Gostaria de antecipar a parcela de ${installment?.dueDate} no valor de R$${installment?.value}?`}
+      title={`Gostaria de antecipar a parcela de ${
+        installment?.dueDate
+      } no valor de ${formatBrlMoney(installment?.value)}?`}
       open={open}
       onClose={onClose}
       titleSize="mediumSmall"

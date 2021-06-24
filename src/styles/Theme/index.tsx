@@ -12,6 +12,7 @@ const theme = {
     defaultWhite: '#ffff',
     success: '#659B5E',
     danger: '#E33D2F',
+    helper: '#CDCDCD',
   },
   fonts: {
     default: 'Catamaran, sans-serif',

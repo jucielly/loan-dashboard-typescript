@@ -8,9 +8,7 @@ export default createGlobalStyle`
 }
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Roboto', sans-serif;
-    
-  
+    font-family: 'Catamaran', sans-serif;
 }
 button {
     cursor: pointer;

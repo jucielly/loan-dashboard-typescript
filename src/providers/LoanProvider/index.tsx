@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { LoanService } from '../../services/loanService';
 import { Installment } from '../../types/installment';
 
@@ -31,7 +37,7 @@ const loanContext = createContext<LoanProviderTypes>({
 });
 export const useLoan = () => useContext(loanContext);
 
-const LoanProvider: React.FC<LoanProviderTypes> = ({ children }) => {
+const LoanProvider: React.FC = ({ children }) => {
   const [overview, setOverview] = useState<LoanProviderTypes['overview']>({
     installments: [],
     amountTaken: 0,

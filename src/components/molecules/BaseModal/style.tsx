@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BaseCard from '../../atoms/BaseCard';
 
 interface ModalProps {
-  titleSize: string;
+  titleSize?: string;
   open: boolean;
 }
 
@@ -40,7 +40,8 @@ export const Modal = styled(BaseCard)<ModalProps>`
     margin: 10px 0px 10px 0px;
     display: flex;
     h1 {
-      font-size: ${(props) => props.theme.fonts.fontSizes[props.titleSize]};
+      font-size: ${(props) =>
+        props.theme.fonts.fontSizes[props.titleSize || 'mediumSmall']};
     }
     .closeBtn {
       position: absolute;
@@ -70,7 +71,12 @@ Modal.defaultProps = {
   titleSize: 'mediumSmall',
 };
 
-export const Overlay = styled.div`
+interface OverlayProps {
+  open: boolean;
+  titleSize?: string;
+}
+
+export const Overlay = styled.div<OverlayProps>`
   position: fixed;
   top: 0;
   left: 0;

@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 200px;
   padding: 20px;
   color: ${(props) => props.theme.colors.defaultWhite};
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.primary};
   margin-bottom: 60px;
   h1 {
     flex-grow: 1;

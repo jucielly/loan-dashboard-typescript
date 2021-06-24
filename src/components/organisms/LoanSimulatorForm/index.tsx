@@ -50,7 +50,7 @@ const LoanSimulatorForm = () => {
       />
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <TextField
-          label="Valor do emprestimo"
+          label="Valor do empréstimo"
           name="loanValue"
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.loanValue?.message}

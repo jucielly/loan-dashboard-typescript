@@ -5,7 +5,7 @@ import { Card } from './style';
 const LoanSimulatorCard = () => {
   return (
     <Card>
-      <h1>Simular Novo Emprestimo</h1>
+      <h1>Simular Novo Empréstimo</h1>
       <LoanSimulatorForm />
     </Card>
   );

@@ -13,5 +13,9 @@ export const Card = styled(BaseCard)`
   }
   @media (max-width: 500px) {
     width: 350px;
+
+    h1 {
+      text-align: center;
+    }
   }
 `;

@@ -12,7 +12,6 @@ body {
 }
 button {
     cursor: pointer;
-    text-transform: uppercase;
 }
 button:focus {
     outline: none;

@@ -28,7 +28,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({
         <p>O valor do seu empréstimo é de {formatBRLMoney(loanValue)}</p>
         <p>
           Em {numberOfInstallments} parcelas de{' '}
-          {formatBRLMoney(installmentValue)}
+          {formatBRLMoney(installmentValue || 0)}
         </p>
         <p>juros fixos de {monthlyInterest}% aos mês</p>
       </Container>

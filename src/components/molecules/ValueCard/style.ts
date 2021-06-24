@@ -4,7 +4,7 @@ import BaseCard from '../../atoms/BaseCard';
 export const StyledValueCard = styled(BaseCard)`
   padding: 30px;
   display: flex;
-  color: ${(props) => props.theme.colors.fontColor};
+  color: ${(props) => props.theme.colors.secondary};
   width: 300px;
   padding: 20px 20px 20px 20px;
   justify-content: space-between;

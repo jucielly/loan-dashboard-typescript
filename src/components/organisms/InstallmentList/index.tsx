@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import InstallmentListItem from '../../molecules/InstallmentLIstItem';
+import InstallmentListItem from '../../molecules/InstallmentListItem';
 import AntecipateModal from '../AntecipateModal';
 import { useLoan } from '../../../providers/LoanProvider';
-import LoadingSpinner from '../../atoms/LoadingSpinner';
 import { Installment } from '../../../types/installment';
 
 const InstallmentList: React.FC = () => {
@@ -21,12 +20,12 @@ const InstallmentList: React.FC = () => {
   };
 
   const handlePayInstallment = (paidInstallment?: Installment) => () => {
-    payInstallment(paidInstallment);
+    if (paidInstallment) payInstallment(paidInstallment);
     handleCloseModal();
   };
 
   if (loading) {
-    return <LoadingSpinner />;
+    return null;
   }
   return (
     <>

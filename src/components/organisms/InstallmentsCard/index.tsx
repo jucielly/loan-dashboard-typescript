@@ -1,5 +1,5 @@
 import React from 'react';
-import InstallmentList from '../installmentList';
+import InstallmentList from '../InstallmentList';
 import { Card } from './style';
 
 const InstallmentsCard = () => {

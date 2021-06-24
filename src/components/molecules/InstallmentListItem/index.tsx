@@ -20,7 +20,7 @@ const InstallmentListItem: React.FC<InstallmentListProps> = ({
       <span className="value">{formatedValue}</span>
       <span className="date">{dueDate}</span>
       {!installment.paid && (
-        <AnticipateButton color="terciary" onClick={onAntecipate}>
+        <AnticipateButton color="primary" onClick={onAntecipate}>
           Antecipar
         </AnticipateButton>
       )}

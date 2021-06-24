@@ -5,8 +5,8 @@ import { Container } from './style';
 interface TextFieldProps {
   label: string;
   name: string;
-  inputRef: () => void;
-  error: string;
+  inputRef: (ref: null) => void;
+  error?: string;
   type: string;
 }
 

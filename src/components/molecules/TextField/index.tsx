@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../atoms/input';
+import Input from '../../atoms/Input';
 import { Container } from './style';
 
 interface TextFieldProps {
@@ -8,6 +8,8 @@ interface TextFieldProps {
   inputRef: (ref: null) => void;
   error?: string;
   type: string;
+  min: string;
+  max: string;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -16,12 +18,14 @@ const TextField: React.FC<TextFieldProps> = ({
   inputRef,
   error,
   type,
+  min,
+  max,
 }) => {
   return (
     <Container>
       <label htmlFor={name}>{label}</label>
-      <Input name={name} ref={inputRef} type={type} />
-      {error && <p>{error}</p>}
+      <Input name={name} ref={inputRef} type={type} min={min} max={max} />
+      {error && <small>{error}</small>}
     </Container>
   );
 };

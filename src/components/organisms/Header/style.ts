@@ -12,6 +12,12 @@ export const Container = styled.div`
   h1 {
     flex-grow: 1;
   }
+
+  @media (max-width: 375px) {
+    h1 {
+      margin-right: 1px;
+    }
+  }
 `;
 export const CardContainer = styled.div`
   position: absolute;
@@ -22,6 +28,6 @@ export const CardContainer = styled.div`
   @media (max-width: 500px) {
     width: 90%;
     flex-direction: column;
-    margin: 150px 0 20px 0;
+    margin: 140px 0 20px 0;
   }
 `;

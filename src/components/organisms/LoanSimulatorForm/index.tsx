@@ -22,7 +22,9 @@ const LoanSimulatorForm = () => {
     const loanValue = +formValues.loanValue;
     const monthlyInterest = +formValues.monthlyInterest;
     const numberOfInstallments = +formValues.numberOfInstallments;
-    const interest = loanValue * (monthlyInterest / 100);
+
+    const interest =
+      loanValue * ((monthlyInterest * numberOfInstallments) / 100);
     const total = loanValue + interest;
     const installmentValue = total / numberOfInstallments;
 
@@ -48,11 +50,13 @@ const LoanSimulatorForm = () => {
       />
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <TextField
-          label="Valor do emprestimo"
+          label="Valor do empréstimo"
           name="loanValue"
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.loanValue?.message}
           type="number"
+          min="0"
+          max="99999"
         />
         <TextField
           label="Taxa de Juros"
@@ -60,6 +64,8 @@ const LoanSimulatorForm = () => {
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.monthlyInterest?.message}
           type="number"
+          min="0"
+          max="99999"
         />
         <TextField
           label="Total de Parcelas"
@@ -67,6 +73,8 @@ const LoanSimulatorForm = () => {
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.numberOfInstallments?.message}
           type="number"
+          min="0"
+          max="99999"
         />
         <Button color="primary" type="submit">
           Simular

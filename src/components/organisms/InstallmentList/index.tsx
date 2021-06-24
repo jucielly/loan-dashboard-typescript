@@ -3,6 +3,8 @@ import InstallmentListItem from '../../molecules/InstallmentListItem';
 import AntecipateModal from '../AntecipateModal';
 import { useLoan } from '../../../providers/LoanProvider';
 import { Installment } from '../../../types/installment';
+import Loader from '../../atoms/Loader';
+import { Container } from './style';
 
 const InstallmentList: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -25,10 +27,14 @@ const InstallmentList: React.FC = () => {
   };
 
   if (loading) {
-    return null;
+    return (
+      <Container>
+        <Loader className="loader" />
+      </Container>
+    );
   }
   return (
-    <>
+    <Container>
       <AntecipateModal
         open={open}
         onClose={handleCloseModal}
@@ -46,7 +52,7 @@ const InstallmentList: React.FC = () => {
           );
         })}
       </ul>
-    </>
+    </Container>
   );
 };
 

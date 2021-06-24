@@ -7,7 +7,7 @@ export const Card = styled(BaseCard)`
   flex-direction: column;
   align-items: center;
   width: 500px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   h1 {
     margin-top: 20px;
   }

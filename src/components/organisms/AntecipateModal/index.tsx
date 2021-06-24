@@ -19,16 +19,16 @@ const AntecipateModal: React.FC<AntecipateModalProps> = ({
 }) => {
   return (
     <BaseModal
-      title={`Gostaria de antecipar a parcela de ${installment?.dueDate} no valor de ${installment?.value}`}
+      title={`Gostaria de antecipar a parcela de ${installment?.dueDate} no valor de R$${installment?.value}?`}
       open={open}
       onClose={onClose}
       titleSize="mediumSmall"
     >
       <Container>
-        <Button color="success" onClick={payInstallment}>
+        <Button color="success" onClick={payInstallment} className="btn">
           Sim
         </Button>
-        <Button color="danger" onClick={onClose}>
+        <Button color="danger" onClick={onClose} className="btn">
           Não
         </Button>
       </Container>

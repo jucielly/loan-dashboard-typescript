@@ -10,7 +10,7 @@ const Input = styled.input`
   transition: 0.3s;
   margin-bottom: 10px;
   &:focus {
-    border: 1px solid ${(props) => props.theme.colors.terciary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
   }
   &::placeholder {
     color: ${(props) => props.theme.colors.helper};

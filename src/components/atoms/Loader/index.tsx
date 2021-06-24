@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Loader = (props: any) => (
+interface LoaderProps {
+  className?: string;
+}
+const Loader: React.FC<LoaderProps> = (props) => (
   <svg
     width="4em"
     viewBox="0 0 120 30"

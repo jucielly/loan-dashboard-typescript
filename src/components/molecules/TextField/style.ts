@@ -5,6 +5,7 @@ export const Container = styled.fieldset`
   display: flex;
   flex-direction: column;
   color: ${(props) => darken(0.4, props.theme.colors.helper)};
+  padding-bottom: 20px;
   small {
     color: ${(props) => props.theme.colors.danger};
     margin: 0;

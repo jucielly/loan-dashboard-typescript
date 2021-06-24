@@ -53,6 +53,8 @@ const LoanSimulatorForm = () => {
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.loanValue?.message}
           type="number"
+          min="0"
+          max="9999"
         />
         <TextField
           label="Taxa de Juros"
@@ -60,6 +62,8 @@ const LoanSimulatorForm = () => {
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.monthlyInterest?.message}
           type="number"
+          min="0"
+          max="9999"
         />
         <TextField
           label="Total de Parcelas"
@@ -67,6 +71,8 @@ const LoanSimulatorForm = () => {
           inputRef={register({ required: 'Insira o valor' })}
           error={errors.numberOfInstallments?.message}
           type="number"
+          min="0"
+          max="9999"
         />
         <Button color="primary" type="submit">
           Simular

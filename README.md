@@ -2,7 +2,7 @@
 
 Front end da aplicação feito em **React** onde você pode ver os seus "empréstimos", "pagar" parcelas e simular novos "empréstimos".
 
-você pode checar o resultado do projeto [aqui](http://example)
+você pode checar o resultado do projeto [aqui](https://loans.jucielly.dev/)
 
 ## Como usar a aplicação:
 

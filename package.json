@@ -27,7 +27,10 @@
     "build": "react-scripts build",
     "lint": "eslint src/**/*.ts{,x}",
     "lint-fix": "eslint src/**/*.ts{,x} --fix",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy --only hosting",
     "eject": "react-scripts eject"
+
   },
   "browserslist": {
     "production": [
@@ -48,6 +51,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
+    "firebase-tools": "^9.14.0",
     "prettier": "^2.3.1"
   }
 }
